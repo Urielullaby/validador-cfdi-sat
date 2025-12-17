@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Validador CFDI SAT</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Arial;max-width:700px;margin:40px auto;padding:0 16px}
+    .card{border:1px solid #ddd;border-radius:12px;padding:18px}
+    button{padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+    input{padding:10px;border-radius:10px;border:1px solid #ccc;width:100%}
+    .muted{color:#666;font-size:14px}
+  </style>
+</head>
+<body>
+  <h2>Validador CFDI SAT</h2>
+  <div class="card">
+    <form method="POST" enctype="multipart/form-data">
+      <label class="muted">Sube tu XML CFDI</label><br><br>
+      <input type="file" name="xml" accept=".xml" required />
+      <br><br>
+      <button type="submit">Validar y descargar PDF</button>
+    </form>
+    <p class="muted">Se extraen datos del XML y se valida el estado con el WebService oficial del SAT.</p>
+  </div>
+</body>
+</html>
