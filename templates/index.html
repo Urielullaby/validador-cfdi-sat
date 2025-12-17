@@ -13,15 +13,32 @@
   </style>
 </head>
 <body>
-  <h2>Validador CFDI SAT</h2>
+  <h2>Validador CFDI SAT (MAXIMO 10 ARCHIVOS)</h2>
   <div class="card">
-    <form method="POST" enctype="multipart/form-data">
-      <label class="muted">Sube tu XML CFDI</label><br><br>
-      <input type="file" name="xml" accept=".xml" required />
-      <br><br>
-      <button type="submit">Validar y descargar PDF</button>
-    </form>
-    <p class="muted">Se extraen datos del XML y se valida el estado con el WebService oficial del SAT.</p>
+<form method="POST" enctype="multipart/form-data">
+  <input
+    type="file"
+    id="xmlInput"
+    name="xmls"
+    multiple
+    accept=".xml"
+    required
+  >
+  <br><br>
+
+  <button type="submit" id="btnPdf" disabled>
+    Descargar PDF
+  </button>
+
+  <button type="submit" id="btnZip" disabled>
+    Descargar ZIP
+  </button>
+</form>
+
+<script src="/static/control.js"></script>
+
+<p class="muted">Se extraen datos del XML y se valida el estado con el WebService oficial del SAT.</p>
+<p class="muted">Autor: Uriel DG</p>
   </div>
 </body>
 </html>
